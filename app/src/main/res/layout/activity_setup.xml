@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="p4nd4.blocktouch.Setup">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/permissions"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:text=""
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="0sp"
+                            android:textStyle="bold"/>
+
+        <Switch
+            android:id="@+id/ProximitySwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/permissions"
+            android:text="Proximity sensor enabled by default"
+            android:checked="false"
+            />
+                        <WebView
+                            android:id="@+id/gif1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ProximitySwitch"
+                            android:layout_above="@id/btn2"/>
+
+
+        <Button android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn1"
+            android:layout_alignParentBottom="true"
+            android:text="Ok, got it!"
+            android:textSize="25sp"/>
+        <Button android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn2"
+            android:layout_above="@+id/btn3"
+            android:text="@string/more_apps"
+            android:textSize="25sp"/>
+        <Button android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn3"
+            android:layout_above="@+id/btn1"
+            android:text="@string/source_code"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:package="http://schemas.android.com/apk/res-auto"
+    package="p4nd4.blocktouch"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:icon="@drawable/ic_no_touch"
+        android:label="Block Touch">
+        <service
+            android:name=".BlockTouchTile"
+            android:icon="@drawable/ic_no_touch"
+            android:label="Block Touch"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".AlwaysOnTopService"
+            android:exported="false" />
+
+        <activity
+            android:name=".Setup"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Block Touch Setup">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
